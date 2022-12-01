@@ -185,3 +185,39 @@ section .title::after {
 .footer {
   background-color: var(--unique);
 }
+
+@media screen and (max-width: 768px) {
+  .menu-items {
+    display: block !important;
+    /* display: none !important; */
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background-color: var(--unique);
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .menu-items ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  .menu-items ul li {
+    padding: 1rem;
+    margin: 0 !important;
+    text-align: center;
+  }
+  .menu-items ul li a {
+    color: #000;
+  }
+  .menu-items.active {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+}
