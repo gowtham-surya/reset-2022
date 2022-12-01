@@ -71,10 +71,17 @@ section .title::after {
   transform: translateX(-50%);
 }
 .paper {
-  background-color: #c896fa;
+  background-color: var(--unique);
 }
+.paper * {
+  color: white;
+}
+.paper .title::before {
+  background: #fff;
+}
+
 .card {
-  background-color: #c896fa;
+  background-color: var(--unique);
   border-radius: 5px;
   max-width: 400px;
   width: 100%;
@@ -86,6 +93,11 @@ section .title::after {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
+}
+.card a {
+  color: rgb(24, 222, 202);
+  font-weight: bold;
 }
 
 .top-header {
