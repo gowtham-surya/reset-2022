@@ -13,3 +13,8 @@ self.addEventListener("install", (event) => {
   );
 });
 
+//Activate service worker
+
+self.addEventListener('activate', event => {
+  console.log('cache now ready to handle fetches!');
+});
