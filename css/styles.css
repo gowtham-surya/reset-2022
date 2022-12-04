@@ -172,6 +172,45 @@ section .title::after {
   background: var(--unique);
   color: white;
 }
+.home {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url('https://epics.bitsathy.ac.in/images/banner02.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.home h2 {
+  color: var(--unique);
+}
+.home h4,
+.home h5 {
+  color: #a6a6a6;
+}
+.home .counter {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.home .counter h3:first-child {
+  color: #fff;
+}
+.home .counter h3:not(:first-child) {
+  color: #a6a6a6;
+}
+.home .button {
+  width: max-content;
+  padding: 1rem;
+  background-color: var(--unique);
+  border-radius: 5px;
+  margin: 0px auto;
+}
+.home .button a {
+  color: #fff;
+}
 .about .right-text {
   font-size: 20px;
 }

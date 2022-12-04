@@ -10,6 +10,35 @@ $(document).ready(() => {
   });
 });
 
+// Counter
+
+$(document).ready(() => {
+  const countdown = () => {
+    const countDate = new Date('Feb 23, 2023 00:00:00').getTime();
+    const now = new Date().getTime();
+    const gap = countDate - now;
+
+    // Timing constant
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    // Remaining time
+    const remDay = Math.floor(gap / day);
+    const remHour = Math.floor((gap % day) / hour);
+    const remMinute = Math.floor((gap % hour) / minute);
+    const remSecond = Math.floor((gap % minute) / second);
+
+    $('.day').text(remDay);
+    $('.hour').text(remHour);
+    $('.minute').text(remMinute);
+    $('.second').text(remSecond);
+  };
+
+  setInterval(countdown, 1000);
+});
+
 // scroll spy
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.menu-items ul li a');
