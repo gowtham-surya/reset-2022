@@ -14,26 +14,37 @@ $(document).ready(() => {
 
 $(document).ready(() => {
   const countdown = () => {
-    const countDate = new Date('Feb 23, 2023 00:00:00').getTime();
+    const eventDate = new Date('Feb 23, 2023 00:00:00').getTime();
+    const RegLastDate = new Date('Feb 08, 2023 00:00:00').getTime();
     const now = new Date().getTime();
-    const gap = countDate - now;
+    const gap = eventDate - now;
+    if (now > RegLastDate) {
+      $('.home .button a').text('REGISTRATION CLOSED');
+      $('.home .button a').css('pointer-events', 'none');
+      $('.home .button').css('background-color', '#404040');
+    }
+    if (now > RegLastDate - 86400000 && now <= RegLastDate) {
+      $('.home .button a').text('REGISTER SOON');
+    }
 
-    // Timing constant
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
+    if (gap > 0) {
+      // Timing constant
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
 
-    // Remaining time
-    const remDay = Math.floor(gap / day);
-    const remHour = Math.floor((gap % day) / hour);
-    const remMinute = Math.floor((gap % hour) / minute);
-    const remSecond = Math.floor((gap % minute) / second);
+      // Remaining time
+      const remDay = Math.floor(gap / day);
+      const remHour = Math.floor((gap % day) / hour);
+      const remMinute = Math.floor((gap % hour) / minute);
+      const remSecond = Math.floor((gap % minute) / second);
 
-    $('.day').text(remDay);
-    $('.hour').text(remHour);
-    $('.minute').text(remMinute);
-    $('.second').text(remSecond);
+      $('.day').text(remDay);
+      $('.hour').text(remHour);
+      $('.minute').text(remMinute);
+      $('.second').text(remSecond);
+    }
   };
 
   setInterval(countdown, 1000);
