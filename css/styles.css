@@ -32,6 +32,9 @@ a {
 ul {
   margin-bottom: 0 !important;
 }
+.text-justify {
+  text-align: justify;
+}
 
 /* all similar content styling codes */
 .container {
@@ -74,7 +77,10 @@ section .title::after {
   background-color: var(--unique);
 }
 .paper * {
-  color: white;
+  color: #ffffff;
+}
+.paper h6 {
+  color: #eeff00;
 }
 .paper .title::before {
   background: #fff;
