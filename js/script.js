@@ -14,8 +14,8 @@ $(document).ready(() => {
 
 $(document).ready(() => {
   const countdown = () => {
-    const eventDate = new Date('Feb 23, 2023 00:00:00').getTime();
-    const RegLastDate = new Date('Feb 08, 2023 00:00:00').getTime();
+    const eventDate = new Date('Mar 01, 2023 00:00:00').getTime();
+    const RegLastDate = new Date('Feb 15, 2023 00:00:00').getTime();
     const now = new Date().getTime();
     const gap = eventDate - now;
     if (now > RegLastDate) {
