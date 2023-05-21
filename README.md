@@ -4,7 +4,7 @@ This is the official website for the RESET'23 conference, organized by the Elect
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/reset23-website.git`
+1. Clone the repository: `git clone https://github.com/gowtham-surya/reset-2022.git`
 2. Open the `index.html` file in a web browser
 
 ## Contributions
